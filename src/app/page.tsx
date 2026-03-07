@@ -612,7 +612,7 @@ export default function Home() {
         )}
 
         {/* Footer */}
-        <footer style={{ marginTop: 'auto', paddingTop: '24px', marginTop: '40px', borderTop: '1px solid var(--border)' }}>
+        <footer style={{ marginTop: '40px', paddingTop: '24px', borderTop: '1px solid var(--border)' }}>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
             <div className="flex items-center gap-1.5 flex-wrap justify-center sm:justify-start">
               <span className="mono" style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Made with</span>
