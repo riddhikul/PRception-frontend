@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+export const runtime = 'edge';  
 import { NextRequest } from 'next/server';
 
 const FLASK_URL = process.env.NEXT_PUBLIC_FLASK_API_URL || 'http://localhost:8080';
@@ -17,8 +19,7 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body,
-      // @ts-expect-error – Node 18 fetch supports duplex
-      duplex: 'half',
+      // remove the duplex line — edge runtime doesn't need it
     });
   } catch (err) {
     return new Response(
