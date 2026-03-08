@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 
-const FLASK_URL = process.env.FLASK_API_URL || 'http://localhost:8080';
+const FLASK_URL = process.env.NEXT_PUBLIC_FLASK_API_URL || 'http://localhost:8080';
 
 /**
  * Proxy for POST /api/report/stream → Flask POST /report/stream
