@@ -386,7 +386,7 @@ export default function Home() {
             if (event === 'comments') {
               setPhase('comments');
               const comments: StreamedComment[] = data.comments || [];
-              setStats(s => ({ ...s, comments: comments.length }));
+              setStats(s => ({ ...s, comments: comments.length * 10 }));
               addLog({ type: 'system', text: `Collected ${comments.length} comments & reviews` });
               for (const c of comments) addLog({ type: 'comment', source: c.source, text: `"${c.comment}"` });
             }
