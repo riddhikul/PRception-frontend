@@ -407,7 +407,8 @@ export default function Home() {
     } catch (err: unknown) {
       if ((err as Error).name === 'AbortError') return;
       const msg = (err as Error).message || 'An error occurred';
-      setError(msg.includes('502') ? 'Cannot reach Flask API — make sure python app.py is running on port 8080' : msg);
+      console.error('Error:', err); // Add logging
+      setError(msg.includes('502') ? 'Cannot reach Flask API' : msg);
       setPhase('idle');
     }
   };
