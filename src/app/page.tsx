@@ -342,7 +342,7 @@ export default function Home() {
     abortRef.current = ac;
     addLog({ type: 'system', text: `Starting analysis for "${product.trim()}"` });
     try {
-      const res = await fetch('/api/report/stream', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_FLASK_API_URL}/report/stream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ product: product.trim() }),
