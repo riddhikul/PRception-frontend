@@ -512,7 +512,7 @@ export default function Home() {
         {error && (
           <div className="mb-6 px-4 py-3 rounded-xl mono text-sm"
             style={{ border: '1px solid rgba(255,170,77,0.3)', background: 'rgba(255,170,77,0.08)', color: 'var(--red)' }}>
-            ⚠ {error} — is the Flask API running on localhost:8080?
+            ⚠ {error} — is the Flask API running?
           </div>
         )}
 
